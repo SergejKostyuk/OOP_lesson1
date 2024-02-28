@@ -23,6 +23,21 @@ public class Animal {
     private void wakeUp (){
         System.out.println(getType() + " WakeUp");
     }
+    protected void toGo() {
+        System.out.println (getType() + " "+ name + " Бегает");
+    }
+    protected void swim() {
+        System.out.println(getType() + " " + name + " Плавает");
+    }
+    protected void fly() {
+        System.out.println(getType() + " " + name + " Летает");
+    }
+    public void actions(){
+        toGo();
+        swim();
+        fly();
+    }
+
     private void wakeUp (int time){
         System.out.println(getType() + " WakeUp in " + time);
     }
@@ -32,7 +47,7 @@ public class Animal {
     private void play () {
         System.out.println(getType() + " Play");
     }
-    public  void live (){
+    public void live (){
         wakeUp(20);
         eat();
         play();
@@ -66,6 +81,8 @@ public class Animal {
     public void setOwner(Owner owner) {
         this.owner = owner;
     }
+
+
 
     public String toString() {
 
