@@ -1,7 +1,8 @@
-import Clients.*;
+import clients.*;
+import people.Owner;
+import people.People;
 
 import java.time.*;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,13 +15,7 @@ public class Main {
         //System.out.println(leva.getWeight());
         Lion test = new Lion();
         System.out.println(test);
-        //puzo.live();
-        System.out.println("____________");
-        eagle.actions();
-        System.out.println("____________");
-        pike.actions();
-        System.out.println("____________");
-        duck.actions();
+
 //            List<Animal> animals = new ArrayList<>();
 //            animals.add(puzo);
 //            animals.add(leva);

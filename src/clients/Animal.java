@@ -1,6 +1,8 @@
-package Clients;
+package clients;
+import people.Owner;
+
 import java.time.*;
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected float weight;
     protected LocalDate age;
@@ -15,43 +17,6 @@ public class Animal {
     }
     public Animal() {
         this("Животное", 100, LocalDate.now(), new Owner());
-    }
-
-    private void sleep (){
-        System.out.println(getType() + " Sleep");
-    }
-    private void wakeUp (){
-        System.out.println(getType() + " WakeUp");
-    }
-    protected void toGo() {
-        System.out.println (getType() + " "+ name + " Бегает");
-    }
-    protected void swim() {
-        System.out.println(getType() + " " + name + " Плавает");
-    }
-    protected void fly() {
-        System.out.println(getType() + " " + name + " Летает");
-    }
-    public void actions(){
-        toGo();
-        swim();
-        fly();
-    }
-
-    private void wakeUp (int time){
-        System.out.println(getType() + " WakeUp in " + time);
-    }
-    private void eat (){
-        System.out.println(getType() + " Eat");
-    }
-    private void play () {
-        System.out.println(getType() + " Play");
-    }
-    public void live (){
-        wakeUp(20);
-        eat();
-        play();
-        sleep();
     }
 
     public String getType(){
