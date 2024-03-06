@@ -1,8 +1,11 @@
-package clients;
+package clients.impl;
+import clients.Animal;
+import clients.Goable;
+import clients.Swimable;
 import people.Owner;
 
 import java.time.LocalDate;
-public class Lion  extends Animal implements Swimable, Goable{
+public class Lion  extends Animal implements Swimable, Goable {
 
     public Lion(String name, float weight, LocalDate age, Owner owner) {
         super(name, weight, age, owner);
@@ -14,11 +17,12 @@ public class Lion  extends Animal implements Swimable, Goable{
 
     @Override
     public double run() {
-        return Goable.super.run();
+        return 60;
     }
+
 
     @Override
     public double swim() {
-        return Swimable.super.swim();
+        return 6;
     }
 }
