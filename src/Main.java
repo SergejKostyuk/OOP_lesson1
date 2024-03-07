@@ -1,5 +1,35 @@
+import pharmacy.Medicine2;
+import pharmacy.MedicineComponent;
+import pharmacy.impl.Asitromin;
+import pharmacy.impl.Penicilinium;
+import pharmacy.impl.Vetbicid;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
+
+        ArrayList<MedicineComponent> medList = new ArrayList<>();
+        MedicineComponent asitron = new Asitromin("Аситро", 50, 70);
+        MedicineComponent penicil = new Penicilinium("Пеницилин", 100, 75);
+        MedicineComponent vebic = new Vetbicid("Vebic", 150, 15);
+        Medicine2 medicine1 = new Medicine2();
+        medicine1.addComponent(asitron).addComponent(penicil).addComponent(vebic);
+//        for (MedicineComponent component : medicine1){
+//        }
+//        Iterator<MedicineComponent> med = medicine1;
+//        while (med.hasNext()) System.out.println(med.next());
+//        for (MedicineComponent component : medicine1){
+//            System.out.println(component);
+//
+//        }
+        medList.add(asitron);
+        medList.add(penicil);
+        medList.add(vebic);
+        System.out.println(medList);
+        Collections.sort(medList, ((o1, o2) -> 0));
+        System.out.println(medList);
 //        Animal leva = new Lion("Лёва", 200, LocalDate.now(), new Owner());
 //        Lion puzo = new Lion("Лёва_Батя", 450, LocalDate.now(), new Owner());
 //        Dog pes = new Dog("Дружок", 30, LocalDate.now(), new Owner());
